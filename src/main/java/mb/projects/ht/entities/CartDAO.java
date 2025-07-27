@@ -31,6 +31,6 @@ public class CartDAO {
     @Column(name = "transaction_id")
     private String transactionId;
 
-    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     private List<CartContentDAO> contents;
 }

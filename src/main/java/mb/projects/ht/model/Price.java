@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @NoArgsConstructor
@@ -13,7 +14,7 @@ import java.util.List;
 @ToString
 public class Price {
     Long itemId;
-    Long oneTimePrice;
-    List<RecurringPrice> recurringPrices;
-    //RecurringPrice recurringPrices;
+    BigDecimal oneTimePrice;
+    //List<RecurringPrice> recurringPrices;
+    RecurringPrice recurringPrice;
 }

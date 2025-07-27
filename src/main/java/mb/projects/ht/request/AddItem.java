@@ -34,4 +34,11 @@ public class AddItem {
     @Min(value = 1, message = "Value must be greater than 0")
     Integer quantity;
 
+    public boolean isRecurring() {
+        if(price.getOneTimePrice()!=null) {
+            return false;
+        }
+        return true;
+    }
+
 }

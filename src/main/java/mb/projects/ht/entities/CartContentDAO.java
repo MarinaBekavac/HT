@@ -18,13 +18,20 @@ public class CartContentDAO {
     @JoinColumn(name = "cart_id", referencedColumnName = "id", nullable = false)
     private CartDAO cart;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "item_id", referencedColumnName = "id", nullable = false)
-    private ItemDAO item;
+    private ItemPriceDAO itemPrice;
 
     @Column(name = "action_id")
     private Integer actionId;
 
     @Column(name = "quantity")
     private Integer quantity;
+
+    public CartContentDAO(Integer quantity, Integer actionId, ItemPriceDAO itemPrice, CartDAO cart) {
+        this.quantity = quantity;
+        this.actionId = actionId;
+        this.itemPrice = itemPrice;
+        this.cart = cart;
+    }
 }

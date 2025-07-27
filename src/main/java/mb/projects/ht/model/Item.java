@@ -11,7 +11,7 @@ import lombok.ToString;
 @ToString
 public class Item {
     String identifier;
-    Price price;
+    Price itemPrice;
     String action;
     Long quantity;
 

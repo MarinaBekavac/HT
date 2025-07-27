@@ -6,13 +6,15 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import mb.projects.ht.enums.TimeFrameEnum;
 
+import java.math.BigDecimal;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @ToString
 public class RecurringPrice {
 
-    Long amount;
+    BigDecimal amount;
     Long duration;
     TimeFrameEnum timeFrame;
 }
